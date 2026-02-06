@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="map_background">#1C2535</color>
+    <color name="map_location">#2652F5</color>
+    <color name="map_location_alpha">#402652F5</color>
+</resources>
