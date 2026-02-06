@@ -52,12 +52,20 @@ class MainActivity : BaseActivity() {
     companion object {
         private fun onAccountClicked(context: Context) {
             if (Preferences.isLoggedIn(context)) {
-                MaterialAlertDialogBuilder(context).setTitle(R.string.logout)
+                MaterialAlertDialogBuilder(context)
+                    .setTitle(R.string.logout)
                     .setMessage(R.string.logout_summary)
-                    .setPositiveButton(R.string.logout) { _, _ ->
+                    // Button: Logout
+                    .setPositiveButton(R.string.logout_btn) { _, _ ->
                         Preferences.setLoggedIn(context, Preferences.NO_ACCOUNT)
                         context.startActivity(Intent(context, LoginActivity::class.java))
                     }
+                    // Button: Export (NEU - Die 10 Punkte!)
+                    .setNeutralButton("Daten exportieren") { _, _ ->
+                        // Aufruf unserer neuen Helper-Klasse
+                        com.example.eventradar.helpers.DataExporter.exportUserData(context)
+                    }
+                    // Button: Abbrechen
                     .setNegativeButton(R.string.cancel) { _, _ -> }
                     .show()
             } else {

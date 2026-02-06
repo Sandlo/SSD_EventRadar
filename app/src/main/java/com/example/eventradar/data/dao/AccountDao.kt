@@ -27,4 +27,7 @@ interface AccountDao {
      */
     @Insert
     suspend fun insert(account: Account): Long
+
+    @androidx.room.Query("SELECT * FROM account")
+    suspend fun getAll(): List<Account>
 }

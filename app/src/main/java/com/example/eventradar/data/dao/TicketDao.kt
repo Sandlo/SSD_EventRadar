@@ -41,4 +41,7 @@ interface TicketDao {
      */
     @Insert
     suspend fun insert(ticket: Ticket): Long
+
+    @Query("SELECT * FROM ticket WHERE user_id = :userId")
+    suspend fun getRawTickets(userId: Long): List<Ticket>
 }

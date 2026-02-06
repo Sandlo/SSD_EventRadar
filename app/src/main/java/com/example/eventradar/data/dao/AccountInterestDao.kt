@@ -21,4 +21,7 @@ interface AccountInterestDao {
      */
     @Query("SELECT * FROM account_interest WHERE account_id = :userId")
     suspend fun getUserInterests(userId: Long): List<AccountInterest>
+
+    @androidx.room.Query("SELECT * FROM account_interest")
+    suspend fun getAll(): List<com.example.eventradar.data.entities.AccountInterest>
 }
