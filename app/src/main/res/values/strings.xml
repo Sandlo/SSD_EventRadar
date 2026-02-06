@@ -52,8 +52,9 @@
     <string name="search_hint_map">Finde Events in der Nähe</string>
     <string name="search_hint_tickets">Durchsuche deine Tickets</string>
 
-    <string name="logout">Abmelden</string>
-    <string name="logout_summary">Sind Sie sich sicher, dass Sie sich abmelden möchten?</string>
+    <string name="logout">Account verwalten</string>
+    <string name="logout_btn">Abmelden</string>
+    <string name="logout_summary">Möchten Sie sich abmelden oder Ihre gespeicherten Daten herunterladen?</string>
 
     <string name="scope">Außerhalb des Umfangs</string>
     <string name="scope_summary">Die Funktion, welche Sie versuchen aufzurufen, liegt nicht im Implementierungsumfang.</string>
